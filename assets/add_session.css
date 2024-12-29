@@ -1,1 +1,340 @@
+body::-webkit-scrollbar {
 
+    display: none; /* Hide the scrollbar */
+
+}
+
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-image: linear-gradient(to left, #5cf6fc, #a2a0f3);
+
+    background-color: azure;
+
+}
+
+
+
+html,
+
+body {
+
+    min-height: 100vh;
+
+}
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+main {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 20px auto;
+
+}
+
+
+
+main h1 {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-family: 'Abril Fatface', serif;
+
+    font-size: 2.5rem;
+
+    word-wrap: nowrap;
+
+    word-spacing: 0.2px;
+
+    font-weight: bolder;
+
+    color: #264653; /* Text color to match scheme */
+
+}
+
+
+
+.form-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: linear-gradient(to bottom left, #ebf0aa, #ca82e0);
+
+    padding: 20px 0px;
+
+    margin: 4rem auto 12rem auto;
+
+    justify-self: center;
+
+    width: 95%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.form-container .addbetchbtn {
+
+    background-color: #264653;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-size: 1rem;
+
+    padding: 0.7rem 1.2rem;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    width: fit-content;
+
+}
+
+
+
+.form-container .addbetchbtn:hover {
+
+    background-color: #2a9d8f; /* Hover color to match scheme */
+
+}
+
+
+
+.form-container .form {
+
+    width: 95%;
+
+}
+
+
+
+.form-container .form .year {
+
+    margin-bottom: 15px;
+
+    padding: 10px;
+
+    background-color: #f1faee;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.form-container .form .year label {
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #264653;
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.form-container .form .year input[type="text"] {
+
+    width: 100%;
+
+    padding: 8px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    color: #264653;
+
+}
+
+
+
+.form-container .form .year input[type="text"]:focus {
+
+    outline: none;
+
+    border-color: #66afe9;
+
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+
+}
+
+
+
+.form-container .form #students .inputFields {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    margin-bottom: 1rem;
+
+    padding-bottom: 1rem;
+
+    border-bottom: 3px solid #8d99ae;
+
+}
+
+
+
+.form-container .form #students .inputFields .data {
+
+    margin-bottom: 1px;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+}
+
+
+
+.data {
+
+    width: 47%;
+
+}
+
+
+
+.data input {
+
+    width: 100%;
+
+    padding: 8px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    color: #264653;
+
+}
+
+
+
+.data input:focus {
+
+    outline: none;
+
+    border-color: #2a9d8f;
+
+    box-shadow: 0 0 5px rgba(42, 157, 143, 0.6);
+
+}
+
+
+
+.data .select {
+
+    width: 100%;
+
+    padding: 11px 15px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    background-color: #ffffff;
+
+    color: #264653;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.data .select:focus {
+
+    outline: none;
+
+    border-color: #2a9d8f;
+
+    box-shadow: 0 0 5px rgba(42, 157, 143, 0.6);
+
+}
+
+
+
+@media (max-width: 760px) {
+
+    .form-container .form #students .inputFields {
+
+        flex-direction: column;
+
+        border-bottom: 3px solid #264653;
+
+    }
+    .data {
+        width: 100%;
+    }
+
+}
+
+  
