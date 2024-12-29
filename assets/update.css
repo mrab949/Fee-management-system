@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Hide the scrollbar */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to left, #5cf6fc, #a2a0f3);
+    color: #333;
+}
+
+.updateBtn {
+    padding: 12px 20px;
+    background-color: #6229ce;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+}
+
+.updateBtn:hover {
+    background-color: #357ae8;
+    transform: translateY(-2px);
+}
+
+.updateBtn:active {
+    background-color: #3061c3;
+    transform: translateY(1px);
+}
+
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.inpts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    background-color: #fff;
+}
+
+select option {
+    font-size: 16px;
+    padding: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #4c8bf5;
+    box-shadow: 0 0 5px rgba(76, 139, 245, 0.3);
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #4c8bf5;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #357ae8;
+}
+
+button[type="submit"]:active {
+    background-color: #3061c3;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+.updates {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.updates h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.due-dates {
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #4c8bf5;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+.no-updates {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+table th {
+    background-color: rgb(42, 157, 143);
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(226, 181, 143);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(238, 214, 154);
+}
+
+table tr:hover {
+    background-color: rgb(141, 193, 228);
+    color: rgb(8, 18, 24);
+}
+#sendUpdateForm {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+/* Make the text area more spacious */
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #4c8bf5;
+    box-shadow: 0 0 5px rgba(76, 139, 245, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+body,
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #5cf6fc, #a2a0f3);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 65vw;
+    /* max-width: 600px; */
+    background: linear-gradient(to bottom left, #8ecae6, #219ebc);
+    padding: 35px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #264653;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e76f51;
+    margin-top: 15px;
+}
+
+.profile-card h2 {
+    margin: 10px 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #264653;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons-row button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    color: #264653;
+    width: 50%;
+    background-color: #f4a261;
+    border: 2px solid #e9c46a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons-row button:hover {
+    background-color: #e76f51;
+    color: #ffffff;
+}
+
+.form-section {
+    margin-top: 10px;
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.form-section label {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    color: #264653;
+    margin-bottom: 5px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #2a9d8f;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #264653;
+}
+
+.form-section button {
+    font-size: 16px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #f4a261;
+    border: 2px solid #e9c46a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #70ad4e;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .buttons-row button {
+        font-size: 14px;
+    }
+}

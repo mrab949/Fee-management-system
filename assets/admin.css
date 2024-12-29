@@ -1,0 +1,397 @@
+body::-webkit-scrollbar {
+    display: none;          
+}
+
+body {
+     font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #d6e6f2, #bcd0e8);
+    color: #333;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toggleParent {
+    background-image: linear-gradient(to right, rgba(29, 161, 242, 1), rgba(29, 161, 242, 1)); 
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem .5rem;
+    align-items: center;
+    z-index: 900;
+}
+
+.toggleParent .button {
+    background-color: transparent;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.toggleParent .button i {
+    background: transparent;
+    color: rgba(255, 255, 255, 1);
+}
+
+#close-icon {
+    position: absolute;
+    top: 3px;
+    font-size: 2rem;
+    right: 10px;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.sidebar {
+    left: 0;
+    width: 250px;
+    background: linear-gradient(to bottom, #2b3d4f, #1f2b38);
+    color: white;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    transition: all 0.7s ease;
+    z-index: 1000;
+    overflow-y:auto;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: none;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.sidebar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 10px auto;
+    border: 3px solid #4a90e2;
+}
+
+.sidebar img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    padding: 11px;
+    text-align: left;
+    height: 2.5rem;
+    margin-left: 5px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: .5rem 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #8d99ae; 
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul li .logoutBtn button.logout {
+    border: none;
+    color: rgb(248, 245, 245);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    background: transparent;
+    font-size: 1.1rem;
+}
+
+.logout .fas {
+    font-size: 1.1rem;
+}
+
+.logout:hover i {
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li .logoutBtn:hover {
+    background-color: #FF0000; 
+    width: 100%;
+}
+
+.sidebar ul li .logoutBtn button.logout:hover {
+    color: #FFFFFF;
+}
+
+.content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(to bottom left, #e3f2fd, #bbdefb); 
+    transition: margin-left 0.3s ease;
+}
+
+.content .dashboard {
+    text-align: center;
+    font-family: 'Abril Fatface', serif;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.content .pages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .pages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    justify-content: center;
+}
+
+.content .pages .page {
+    height: 9rem;
+    width: 18rem;
+    margin: 1rem;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    background: linear-gradient(to right, #5cf6fc, #4a90e2); 
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .pages .page:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content .pages .page a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content .pages .page a:hover {
+    color: #333;
+    transition: color 0.3s ease;
+}
+@media (min-width:901px) {
+    .sidebar {
+        left: 0;
+    }
+
+    .content {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    #toggleBtn,
+    #close-icon,
+    .toggleParent {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .content .pages .page {
+        width: 40%;
+    }
+
+    .sidebar {
+        left: -270px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #toggleBtn,
+    #close-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content .pages .page {
+        width: 40%;
+        font-size: 1.3rem;
+    }
+    .content .pages .page a{
+        font-size: 1.3rem;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .content .pages .page {
+        width: 90%;
+    }
+
+    .content .pages .page a{
+        font-size: 1.3rem;
+    }
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+
+
+
+.content .dashboard {
+    text-align: center;
+    font-family: 'Abril Fatface', serif;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.content .pages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    justify-content: center;
+}
+
+.content .pages .page {
+    height: 9rem;
+    width: 18rem;
+    margin: 1rem;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    background: linear-gradient(to right, #5cf6fc, #4a90e2); 
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .pages .page:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content .pages .page a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.content .pages .page a:hover {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .content .pages .page {
+        width: 40%;
+    }
+
+    .toggleParent {
+        display: flex;
+    }
+
+    .sidebar {
+        left: -270px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .content .pages .page {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+} */

@@ -1,0 +1,44 @@
+
+.report {
+    position: fixed;
+    right: 1.4rem;
+    top: 10rem;
+    background-color: #f5c905;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.report:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px rgba(72, 163, 58, 0.5);
+}
+
+.report::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 4px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #f5c905;
+    transition: border-top 0.3s ease;
+}
+
+.report:hover::after {
+    border-top: 30px solid #45a049;
+}
