@@ -31,4 +31,4 @@ The Departmental Fee Management System is a web-based application designed to st
 
 1. **Clone the Repository**  
    ```bash
-https://github.com/mrab949/fee-management-system.git
+   https://github.com/mrab949/fee-management-system.git
